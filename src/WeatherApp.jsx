@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import image from "./components/weather.png";
 export const WeatherApp = () => {
     const urlBase = import.meta.env.VITE_BASE_URL;
     const API_KEY = import.meta.env.VITE_API_KEY;
@@ -61,7 +61,7 @@ export const WeatherApp = () => {
     return (
         <div className="container">
             <h1>
-                <img src="/favicon.ico" />
+                <img src={image} />
                 Simple Weather App
             </h1>
 
