@@ -1,0 +1,180 @@
+/* Estilos generales */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+        135deg,
+        #1e3c72,
+        #2a5298
+    ); /* Fondo degradado azul oscuro */
+    color: #ffffff; /* Color de fuente blanco */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    border-radius: 12px;
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.container h1 img {
+    margin-right: 10px;
+    width: 80px;
+    height: 80px;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+    color: #ffffff;
+    outline: none;
+}
+
+input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Placeholder semi-transparente */
+}
+
+button {
+    padding: 12px 24px;
+    background: #4caf50; /* Color de botón coral */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #45a049; /* Color de botón coral más oscuro al pasar el mouse */
+}
+
+/* Estilos para errores */
+.error {
+    background: rgba(255, 99, 71, 0.2); /* Fondo rojo semi-transparente */
+    color: #ff6347; /* Color de fuente rojo coral */
+    padding: 12px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border: 1px solid rgba(255, 99, 71, 0.5);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.error::before {
+    content: "⚠";
+    font-size: 18px;
+}
+
+/* Estilos para resultados del clima */
+.weather-results {
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.weather-results h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.weather-results img {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+    background: rgba(
+        255,
+        255,
+        255,
+        0.2
+    ); /* Fondo semi-transparente para la imagen */
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.attribution {
+    margin-top: 0px;
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7); /* Color de fuente semi-transparente */
+}
+
+.attribution a {
+    color: #4caf50; /* Color de enlace coral */
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+.p {
+    font-weight: bold;
+}
+
+/* Estilos para móviles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    input[type="text"] {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
+
+    .error {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .weather-results {
+        padding: 15px;
+    }
+
+    .weather-results h2 {
+        font-size: 1.2em;
+    }
+
+    .weather-results img {
+        width: 60px;
+        height: 60px;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
