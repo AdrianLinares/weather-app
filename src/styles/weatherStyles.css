@@ -1,83 +1,102 @@
-/* Estilos generales */
+/* Estilos generales - Estos afectan a toda la página */
 body {
+    /* Configuración de la fuente principal y fuentes de respaldo */
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    /* Elimina los márgenes y el relleno predeterminados */
     margin: 0;
     padding: 0;
+    /* Crea un fondo degradado que va desde azul oscuro (#1e3c72) a azul más claro (#2a5298) */
     background: linear-gradient(
         135deg,
-        #1e3c72,
+        /* Dirección del degradado: 135 grados */ #1e3c72,
         #2a5298
-    ); /* Fondo degradado azul oscuro */
-    color: #ffffff; /* Color de fuente blanco */
+    );
+    /* Color del texto */
+    color: #ffffff;
+    /* Asegura que el fondo cubra toda la altura de la ventana */
     min-height: 100vh;
+    /* Centra todo el contenido vertical y horizontalmente usando Flexbox */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Contenedor principal de la aplicación */
 .container {
+    /* Limita el ancho máximo del contenedor */
     max-width: 600px;
     width: 100%;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    /* Crea un fondo semi-transparente (el 0.1 indica 10% de opacidad) */
+    background: rgba(255, 255, 255, 0.1);
+    /* Redondea las esquinas */
     border-radius: 12px;
-    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    /* Crea un efecto de desenfoque detrás del contenedor */
+    backdrop-filter: blur(10px);
+    /* Agrega una sombra suave alrededor del contenedor */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilo del título principal */
 h1 {
-    font-size: 2em;
+    font-size: 2em; /* Tamaño de la fuente: 2 veces el tamaño base */
     margin-bottom: 20px;
     text-align: center;
     color: #ffffff;
 }
 
+/* Estilo de la imagen dentro del título */
 .container h1 img {
     margin-right: 10px;
     width: 80px;
     height: 80px;
 }
 
+/* Estilo del formulario de búsqueda */
 form {
-    display: flex;
-    gap: 10px;
+    display: flex; /* Usa Flexbox para alinear elementos horizontalmente */
+    gap: 10px; /* Espacio entre elementos del formulario */
     margin-bottom: 20px;
 }
 
+/* Estilo del campo de texto */
 input[type="text"] {
-    flex: 1;
+    flex: 1; /* Hace que el input ocupe todo el espacio disponible */
     padding: 12px;
     border: none;
     border-radius: 8px;
     font-size: 16px;
-    background: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+    background: rgba(255, 255, 255, 0.2);
     color: #ffffff;
-    outline: none;
+    outline: none; /* Elimina el borde al hacer focus */
 }
 
+/* Estilo del texto placeholder dentro del input */
 input[type="text"]::placeholder {
-    color: rgba(255, 255, 255, 0.7); /* Placeholder semi-transparente */
+    color: rgba(255, 255, 255, 0.7);
 }
 
+/* Estilo del botón */
 button {
     padding: 12px 24px;
-    background: #4caf50; /* Color de botón coral */
+    background: #4caf50; /* Color verde */
     color: #ffffff;
     border: none;
     border-radius: 8px;
     font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+    transition: background 0.3s ease; /* Animación suave al cambiar el color */
 }
 
+/* Efecto hover del botón */
 button:hover {
-    background: #45a049; /* Color de botón coral más oscuro al pasar el mouse */
+    background: #45a049; /* Verde más oscuro al pasar el mouse */
 }
 
-/* Estilos para errores */
+/* Estilos para mensajes de error */
 .error {
-    background: rgba(255, 99, 71, 0.2); /* Fondo rojo semi-transparente */
-    color: #ff6347; /* Color de fuente rojo coral */
+    background: rgba(255, 99, 71, 0.2);
+    color: #ff6347;
     padding: 12px;
     border-radius: 8px;
     margin: 15px 0;
@@ -88,14 +107,15 @@ button:hover {
     gap: 8px;
 }
 
+/* Agrega un símbolo de advertencia antes del mensaje de error */
 .error::before {
     content: "⚠";
     font-size: 18px;
 }
 
-/* Estilos para resultados del clima */
+/* Estilos para la sección de resultados del clima */
 .weather-results {
-    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 8px;
     margin-top: 20px;
@@ -103,46 +123,48 @@ button:hover {
     text-align: left;
 }
 
+/* Títulos dentro de los resultados */
 .weather-results h2 {
     color: #ffffff;
     margin-bottom: 15px;
 }
 
+/* Imágenes del clima */
 .weather-results img {
     width: 100px;
     height: 100px;
     margin: 10px 0;
-    background: rgba(
-        255,
-        255,
-        255,
-        0.2
-    ); /* Fondo semi-transparente para la imagen */
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     padding: 5px;
 }
 
+/* Estilos para el texto de atribución */
 .attribution {
     margin-top: 0px;
     font-size: 0.9em;
-    color: rgba(255, 255, 255, 0.7); /* Color de fuente semi-transparente */
+    color: rgba(255, 255, 255, 0.7);
 }
 
+/* Enlaces en la atribución */
 .attribution a {
-    color: #4caf50; /* Color de enlace coral */
+    color: #4caf50;
     text-decoration: none;
 }
 
+/* Efecto hover en los enlaces */
 .attribution a:hover {
     text-decoration: underline;
 }
 
+/* Estilo para párrafos específicos */
 .p {
     font-weight: bold;
 }
 
-/* Estilos para móviles */
+/* Estilos responsivos para dispositivos móviles */
 @media (max-width: 600px) {
+    /* Estos estilos se aplicarán cuando la pantalla sea menor a 600px */
     h1 {
         font-size: 1.5em;
     }
